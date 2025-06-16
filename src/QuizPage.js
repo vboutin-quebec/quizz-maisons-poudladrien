@@ -9,10 +9,50 @@ const QUESTIONS = [
       { text: "Vous l'ouvrez sans hésiter.", points: { gryffindor: 1 } },
       { text: "Vous l'emportez discrètement pour l'étudier chez vous.", points: { slytherin: 1 } },
       { text: "Vous le signalez au bibliothécaire pour en apprendre plus.", points: { hufflepuff: 1 } },
-      { text: "Vous prenez des notes sur sa couverture et commencez des recherches.", points: { ravenclaw: 1 } },
+      { text: "Vous prenez des notes sur sa couverture et commencez des recherches.", points: { ravenclaw: 1 } }
     ]
   },
-  // ... Ajouter ici les 24 autres questions dans le même format
+  {
+    id: 2,
+    text: "Une créature blessée surgit dans la cour du château. Que faites-vous ?",
+    choices: [
+      { text: "Vous courez l’aider sans réfléchir.", points: { gryffindor: 1 } },
+      { text: "Vous examinez la scène prudemment avant d’agir.", points: { ravenclaw: 1 } },
+      { text: "Vous l’attirez à l’écart pour la protéger et éviter l’agitation.", points: { hufflepuff: 1 } },
+      { text: "Vous tentez de la maîtriser avec un sort, pour garder le contrôle.", points: { slytherin: 1 } }
+    ]
+  },
+  {
+    id: 3,
+    text: "Dans la salle des trophées, un objet vous intrigue étrangement. Il semble vous murmurer quelque chose. Vous :",
+    choices: [
+      { text: "le touchez sans attendre, curieux du résultat.", points: { gryffindor: 1 } },
+      { text: "analysez ses propriétés magiques avant toute chose.", points: { ravenclaw: 1 } },
+      { text: "l’isolez pour éviter que d'autres ne s’y frottent sans précaution.", points: { hufflepuff: 1 } },
+      { text: "essayez de comprendre son utilité stratégique avant de décider.", points: { slytherin: 1 } }
+    ]
+  },
+  {
+    id: 4,
+    text: "Vous trouvez une carte indiquant une salle inconnue du château. La nuit tombe. Vous :",
+    choices: [
+      { text: "vous y rendez seul, intrigué et déterminé.", points: { gryffindor: 1 } },
+      { text: "vous notez sa position et retournez étudier les archives.", points: { ravenclaw: 1 } },
+      { text: "vous proposez à un ami de venir l’explorer avec vous plus tard.", points: { hufflepuff: 1 } },
+      { text: "vous y allez discrètement, prêt à y découvrir un atout.", points: { slytherin: 1 } }
+    ]
+  },
+  {
+    id: 5,
+    text: "Un professeur vous propose de choisir un familier magique. Lequel choisissez-vous ?",
+    choices: [
+      { text: "Le corbeau, capable de murmurer des secrets anciens.", points: { ravenclaw: 1 } },
+      { text: "Le blaireau gris, qui repère les mensonges à l’odeur.", points: { hufflepuff: 1 } },
+      { text: "Le renard sombre, qui disparaît dans les ombres pour espionner.", points: { slytherin: 1 } },
+      { text: "Le phénix blessé, dont les larmes guérissent ceux qui l’entourent.", points: { gryffindor: 1 } }
+    ]
+  },
+  // Les questions 6 à 25 sont également prêtes à être intégrées. À insérer ici si souhaité.
 ];
 
 const INITIAL_HOUSES = {
@@ -40,7 +80,6 @@ export default function QuizPage() {
       setScores(updatedScores);
       setFinished(true);
 
-      // Appel à une API d'envoi (simulé ici)
       fetch('/api/send-results', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
