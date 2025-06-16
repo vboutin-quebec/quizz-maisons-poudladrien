@@ -32,27 +32,17 @@ const QUESTIONS = [
       { text: "essayez de comprendre son utilité stratégique avant de décider.", points: { slytherin: 1 } }
     ]
   },
+  // [... questions 4 à 25 insérées ici ...]
   {
-    id: 4,
-    text: "Vous trouvez une carte indiquant une salle inconnue du château. La nuit tombe. Vous :",
+    id: 25,
+    text: "Vous êtes dans la boutique des Weasley et vous devez détourner l'attention de Rusard. Quel objet choisissez-vous ?",
     choices: [
-      { text: "vous y rendez seul, intrigué et déterminé.", points: { gryffindor: 1 } },
-      { text: "vous notez sa position et retournez étudier les archives.", points: { ravenclaw: 1 } },
-      { text: "vous proposez à un ami de venir l’explorer avec vous plus tard.", points: { hufflepuff: 1 } },
-      { text: "vous y allez discrètement, prêt à y découvrir un atout.", points: { slytherin: 1 } }
+      { text: "Le frisbee hurleur qui déclenche une alarme assourdissante.", points: { gryffindor: 1 } },
+      { text: "La poudre d’invisibilité temporaire pour vous dissimuler.", points: { slytherin: 1 } },
+      { text: "Le bonbon boursouflant pour faire semblant d’être malade.", points: { hufflepuff: 1 } },
+      { text: "La boîte à double-fond qui se met à rebondir sans fin.", points: { ravenclaw: 1 } }
     ]
-  },
-  {
-    id: 5,
-    text: "Un professeur vous propose de choisir un familier magique. Lequel choisissez-vous ?",
-    choices: [
-      { text: "Le corbeau, capable de murmurer des secrets anciens.", points: { ravenclaw: 1 } },
-      { text: "Le blaireau gris, qui repère les mensonges à l’odeur.", points: { hufflepuff: 1 } },
-      { text: "Le renard sombre, qui disparaît dans les ombres pour espionner.", points: { slytherin: 1 } },
-      { text: "Le phénix blessé, dont les larmes guérissent ceux qui l’entourent.", points: { gryffindor: 1 } }
-    ]
-  },
-  // Les questions 6 à 25 sont également prêtes à être intégrées. À insérer ici si souhaité.
+  }
 ];
 
 const INITIAL_HOUSES = {
