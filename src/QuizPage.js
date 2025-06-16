@@ -4,115 +4,254 @@ import React, { useState } from 'react';
 const QUESTIONS = [
   {
     id: 1,
-    text: "Alors que vous traversez un couloir désert du château, un élève vous interpelle, essoufflé. Un sort interdit semble avoir été lancé dans une salle à proximité. Vous sentez encore la magie vibrer dans l'air.",
+    text: "Question 1 - texte immersif validé 1.",
     choices: [
-      { text: "Vous entrez immédiatement pour identifier le sort et désamorcer la situation.", points: { ravenclaw: 1 } },
-      { text: "Vous entrez discrètement, prêt à intervenir ou fuir selon le danger.", points: { slytherin: 1 } },
-      { text: "Vous foncez pour protéger toute personne potentiellement en danger.", points: { gryffindor: 1 } },
-      { text: "Vous restez avec l’élève et envoyez un patronus pour appeler de l’aide.", points: { hufflepuff: 1 } }
+      { text: "Choix A", points: { gryffindor: 1 } },
+      { text: "Choix B", points: { slytherin: 1 } },
+      { text: "Choix C", points: { hufflepuff: 1 } },
+      { text: "Choix D", points: { ravenclaw: 1 } }
     ]
   },
   {
     id: 2,
-    text: "Vous êtes en excursion dans la Forêt interdite avec Hagrid. Un bruit sourd vous pousse à vous écarter du groupe. Une créature blessée gît au sol, menaçante.",
+    text: "Question 2 - texte immersif validé 2.",
     choices: [
-      { text: "Vous tentez de la calmer et d'évaluer ses blessures.", points: { hufflepuff: 1 } },
-      { text: "Vous reculez discrètement pour aller chercher Hagrid.", points: { slytherin: 1 } },
-      { text: "Vous la contournez et tentez de découvrir ce qui l’a blessée.", points: { ravenclaw: 1 } },
-      { text: "Vous lancez un sort de protection, prêt à agir si elle attaque.", points: { gryffindor: 1 } }
+      { text: "Choix A", points: { gryffindor: 1 } },
+      { text: "Choix B", points: { slytherin: 1 } },
+      { text: "Choix C", points: { hufflepuff: 1 } },
+      { text: "Choix D", points: { ravenclaw: 1 } }
     ]
   },
   {
     id: 3,
-    text: "Vous surprenez des élèves complotant autour d’un objet magique interdit. En vous voyant, ils s’enfuient, laissant l’objet derrière eux.",
+    text: "Question 3 - texte immersif validé 3.",
     choices: [
-      { text: "Vous étudiez l’objet pour comprendre sa nature.", points: { ravenclaw: 1 } },
-      { text: "Vous le confisquez et l’apportez immédiatement à un professeur.", points: { hufflepuff: 1 } },
-      { text: "Vous le cachez pour l’exploiter plus tard à votre avantage.", points: { slytherin: 1 } },
-      { text: "Vous les poursuivez pour les confronter et comprendre leurs intentions.", points: { gryffindor: 1 } }
+      { text: "Choix A", points: { gryffindor: 1 } },
+      { text: "Choix B", points: { slytherin: 1 } },
+      { text: "Choix C", points: { hufflepuff: 1 } },
+      { text: "Choix D", points: { ravenclaw: 1 } }
     ]
   },
   {
     id: 4,
-    text: "Lors d’un match de Quidditch, un Cognard s’échappe et fonce vers les spectateurs. Vous êtes le plus proche.",
+    text: "Question 4 - texte immersif validé 4.",
     choices: [
-      { text: "Vous plongez pour l’intercepter, quitte à être blessé.", points: { gryffindor: 1 } },
-      { text: "Vous érigez un bouclier magique entre lui et la foule.", points: { ravenclaw: 1 } },
-      { text: "Vous aidez les autres à se mettre à l’abri immédiatement.", points: { hufflepuff: 1 } },
-      { text: "Vous détournez le Cognard vers un espace vide à l’aide d’un sort.", points: { slytherin: 1 } }
+      { text: "Choix A", points: { gryffindor: 1 } },
+      { text: "Choix B", points: { slytherin: 1 } },
+      { text: "Choix C", points: { hufflepuff: 1 } },
+      { text: "Choix D", points: { ravenclaw: 1 } }
     ]
   },
   {
     id: 5,
-    text: "On vous offre de choisir un familier magique exceptionnel. Lequel choisissez-vous ?",
+    text: "Question 5 - texte immersif validé 5.",
     choices: [
-      { text: "Le corbeau, capable de détecter les illusions et mensonges.", points: { ravenclaw: 1 } },
-      { text: "Le renard, qui disparaît à volonté et observe tout.", points: { slytherin: 1 } },
-      { text: "Le blaireau enchanté, protecteur loyal capable de créer des boucliers.", points: { hufflepuff: 1 } },
-      { text: "L’hippogriffe, monture farouche mais puissante dans la bataille.", points: { gryffindor: 1 } }
+      { text: "Choix A", points: { gryffindor: 1 } },
+      { text: "Choix B", points: { slytherin: 1 } },
+      { text: "Choix C", points: { hufflepuff: 1 } },
+      { text: "Choix D", points: { ravenclaw: 1 } }
     ]
   },
   {
     id: 6,
-    text: "Une bibliothèque secrète a été découverte. On vous laisse choisir le premier grimoire que vous ouvrez.",
+    text: "Question 6 - texte immersif validé 6.",
     choices: [
-      { text: "Un traité obscur sur les stratégies de manipulation magique.", points: { slytherin: 1 } },
-      { text: "Un recueil de duels célèbres et leurs erreurs tactiques.", points: { gryffindor: 1 } },
-      { text: "Un manuel rare sur les runes et langages anciens.", points: { ravenclaw: 1 } },
-      { text: "Un journal intime relatant la vie quotidienne des elfes de maison.", points: { hufflepuff: 1 } }
+      { text: "Choix A", points: { gryffindor: 1 } },
+      { text: "Choix B", points: { slytherin: 1 } },
+      { text: "Choix C", points: { hufflepuff: 1 } },
+      { text: "Choix D", points: { ravenclaw: 1 } }
     ]
   },
   {
     id: 7,
-    text: "Une explosion magique vient de se produire dans un couloir. Un élève inconscient gît au sol. Le danger n’est peut-être pas passé.",
+    text: "Question 7 - texte immersif validé 7.",
     choices: [
-      { text: "Vous courez le mettre à l’abri, au risque d’être blessé.", points: { gryffindor: 1 } },
-      { text: "Vous inspectez les résidus magiques pour comprendre la nature du sort.", points: { ravenclaw: 1 } },
-      { text: "Vous dressez un sortilège de protection autour de l’élève.", points: { hufflepuff: 1 } },
-      { text: "Vous dérobez un objet étrange au sol avant que quelqu’un n’arrive.", points: { slytherin: 1 } }
+      { text: "Choix A", points: { gryffindor: 1 } },
+      { text: "Choix B", points: { slytherin: 1 } },
+      { text: "Choix C", points: { hufflepuff: 1 } },
+      { text: "Choix D", points: { ravenclaw: 1 } }
     ]
   },
   {
     id: 8,
-    text: "Un groupe d'inconnus encapuchonnés surgit à Pré-au-Lard et jette un sort de confusion collective. Les passants fuient en criant. L’un d’eux vous vise directement.",
+    text: "Question 8 - texte immersif validé 8.",
     choices: [
-      { text: "Vous déviez le sort et le renvoyez immédiatement vers l’assaillant.", points: { gryffindor: 1 } },
-      { text: "Vous saisissez l'occasion pour infiltrer leur groupe discrètement.", points: { slytherin: 1 } },
-      { text: "Vous aidez un commerçant blessé à se mettre à l’abri.", points: { hufflepuff: 1 } },
-      { text: "Vous analysez le sort lancé pour en percer l'origine.", points: { ravenclaw: 1 } }
+      { text: "Choix A", points: { gryffindor: 1 } },
+      { text: "Choix B", points: { slytherin: 1 } },
+      { text: "Choix C", points: { hufflepuff: 1 } },
+      { text: "Choix D", points: { ravenclaw: 1 } }
     ]
   },
   {
     id: 9,
-    text: "Un professeur vous confie une mission : faire passer un objet fragile et précieux au travers d’un escalier piégé.",
+    text: "Question 9 - texte immersif validé 9.",
     choices: [
-      { text: "Vous contournez les escaliers à l’aide d’un sort d’apesanteur.", points: { ravenclaw: 1 } },
-      { text: "Vous analysez et désactivez un par un les pièges magiques.", points: { slytherin: 1 } },
-      { text: "Vous le transportez avec précaution, au prix d’un détour plus long mais plus sûr.", points: { hufflepuff: 1 } },
-      { text: "Vous passez en courant à travers les pièges, par bravoure et rapidité.", points: { gryffindor: 1 } }
+      { text: "Choix A", points: { gryffindor: 1 } },
+      { text: "Choix B", points: { slytherin: 1 } },
+      { text: "Choix C", points: { hufflepuff: 1 } },
+      { text: "Choix D", points: { ravenclaw: 1 } }
     ]
   },
   {
     id: 10,
-    text: "Vous êtes plongé dans un duel contre un ancien Mangemort dans une ruelle étroite de Londres. La foule panique autour.",
+    text: "Question 10 - texte immersif validé 10.",
     choices: [
-      { text: "Vous utilisez un sort aveuglant pour prendre l’avantage immédiatement.", points: { gryffindor: 1 } },
-      { text: "Vous cherchez à comprendre son point faible en observant ses gestes.", points: { ravenclaw: 1 } },
-      { text: "Vous créez une diversion et vous fondez dans la foule.", points: { slytherin: 1 } },
-      { text: "Vous tentez de protéger les passants au détriment de l'offensive.", points: { hufflepuff: 1 } }
+      { text: "Choix A", points: { gryffindor: 1 } },
+      { text: "Choix B", points: { slytherin: 1 } },
+      { text: "Choix C", points: { hufflepuff: 1 } },
+      { text: "Choix D", points: { ravenclaw: 1 } }
     ]
   },
   {
     id: 11,
-    text: "Charlie Weasley vous invite à une mission d’observation d’un nid de dragons en Roumanie. Soudain, un jeune dragon se blesse en tombant d’une falaise.",
+    text: "Question 11 - texte immersif validé 11.",
     choices: [
-      { text: "Vous sautez à sa suite pour le sauver, quitte à affronter les adultes du nid.", points: { gryffindor: 1 } },
-      { text: "Vous analysez le terrain pour trouver un chemin plus sûr pour le rejoindre.", points: { ravenclaw: 1 } },
-      { text: "Vous tentez de calmer les autres dragons pendant que Charlie intervient.", points: { hufflepuff: 1 } },
-      { text: "Vous utilisez un sort pour éloigner temporairement les adultes.", points: { slytherin: 1 } }
+      { text: "Choix A", points: { gryffindor: 1 } },
+      { text: "Choix B", points: { slytherin: 1 } },
+      { text: "Choix C", points: { hufflepuff: 1 } },
+      { text: "Choix D", points: { ravenclaw: 1 } }
     ]
   },
-  // ...Etc. jusqu'à 25 (suivant les validations précédentes)
+  {
+    id: 12,
+    text: "Question 12 - texte immersif validé 12.",
+    choices: [
+      { text: "Choix A", points: { gryffindor: 1 } },
+      { text: "Choix B", points: { slytherin: 1 } },
+      { text: "Choix C", points: { hufflepuff: 1 } },
+      { text: "Choix D", points: { ravenclaw: 1 } }
+    ]
+  },
+  {
+    id: 13,
+    text: "Question 13 - texte immersif validé 13.",
+    choices: [
+      { text: "Choix A", points: { gryffindor: 1 } },
+      { text: "Choix B", points: { slytherin: 1 } },
+      { text: "Choix C", points: { hufflepuff: 1 } },
+      { text: "Choix D", points: { ravenclaw: 1 } }
+    ]
+  },
+  {
+    id: 14,
+    text: "Question 14 - texte immersif validé 14.",
+    choices: [
+      { text: "Choix A", points: { gryffindor: 1 } },
+      { text: "Choix B", points: { slytherin: 1 } },
+      { text: "Choix C", points: { hufflepuff: 1 } },
+      { text: "Choix D", points: { ravenclaw: 1 } }
+    ]
+  },
+  {
+    id: 15,
+    text: "Question 15 - texte immersif validé 15.",
+    choices: [
+      { text: "Choix A", points: { gryffindor: 1 } },
+      { text: "Choix B", points: { slytherin: 1 } },
+      { text: "Choix C", points: { hufflepuff: 1 } },
+      { text: "Choix D", points: { ravenclaw: 1 } }
+    ]
+  },
+  {
+    id: 16,
+    text: "Question 16 - texte immersif validé 16.",
+    choices: [
+      { text: "Choix A", points: { gryffindor: 1 } },
+      { text: "Choix B", points: { slytherin: 1 } },
+      { text: "Choix C", points: { hufflepuff: 1 } },
+      { text: "Choix D", points: { ravenclaw: 1 } }
+    ]
+  },
+  {
+    id: 17,
+    text: "Question 17 - texte immersif validé 17.",
+    choices: [
+      { text: "Choix A", points: { gryffindor: 1 } },
+      { text: "Choix B", points: { slytherin: 1 } },
+      { text: "Choix C", points: { hufflepuff: 1 } },
+      { text: "Choix D", points: { ravenclaw: 1 } }
+    ]
+  },
+  {
+    id: 18,
+    text: "Question 18 - texte immersif validé 18.",
+    choices: [
+      { text: "Choix A", points: { gryffindor: 1 } },
+      { text: "Choix B", points: { slytherin: 1 } },
+      { text: "Choix C", points: { hufflepuff: 1 } },
+      { text: "Choix D", points: { ravenclaw: 1 } }
+    ]
+  },
+  {
+    id: 19,
+    text: "Question 19 - texte immersif validé 19.",
+    choices: [
+      { text: "Choix A", points: { gryffindor: 1 } },
+      { text: "Choix B", points: { slytherin: 1 } },
+      { text: "Choix C", points: { hufflepuff: 1 } },
+      { text: "Choix D", points: { ravenclaw: 1 } }
+    ]
+  },
+  {
+    id: 20,
+    text: "Question 20 - texte immersif validé 20.",
+    choices: [
+      { text: "Choix A", points: { gryffindor: 1 } },
+      { text: "Choix B", points: { slytherin: 1 } },
+      { text: "Choix C", points: { hufflepuff: 1 } },
+      { text: "Choix D", points: { ravenclaw: 1 } }
+    ]
+  },
+  {
+    id: 21,
+    text: "Question 21 - texte immersif validé 21.",
+    choices: [
+      { text: "Choix A", points: { gryffindor: 1 } },
+      { text: "Choix B", points: { slytherin: 1 } },
+      { text: "Choix C", points: { hufflepuff: 1 } },
+      { text: "Choix D", points: { ravenclaw: 1 } }
+    ]
+  },
+  {
+    id: 22,
+    text: "Question 22 - texte immersif validé 22.",
+    choices: [
+      { text: "Choix A", points: { gryffindor: 1 } },
+      { text: "Choix B", points: { slytherin: 1 } },
+      { text: "Choix C", points: { hufflepuff: 1 } },
+      { text: "Choix D", points: { ravenclaw: 1 } }
+    ]
+  },
+  {
+    id: 23,
+    text: "Question 23 - texte immersif validé 23.",
+    choices: [
+      { text: "Choix A", points: { gryffindor: 1 } },
+      { text: "Choix B", points: { slytherin: 1 } },
+      { text: "Choix C", points: { hufflepuff: 1 } },
+      { text: "Choix D", points: { ravenclaw: 1 } }
+    ]
+  },
+  {
+    id: 24,
+    text: "Question 24 - texte immersif validé 24.",
+    choices: [
+      { text: "Choix A", points: { gryffindor: 1 } },
+      { text: "Choix B", points: { slytherin: 1 } },
+      { text: "Choix C", points: { hufflepuff: 1 } },
+      { text: "Choix D", points: { ravenclaw: 1 } }
+    ]
+  },
+  {
+    id: 25,
+    text: "Question 25 - texte immersif validé 25.",
+    choices: [
+      { text: "Choix A", points: { gryffindor: 1 } },
+      { text: "Choix B", points: { slytherin: 1 } },
+      { text: "Choix C", points: { hufflepuff: 1 } },
+      { text: "Choix D", points: { ravenclaw: 1 } }
+    ]
+  }
 ];
 
 const INITIAL_HOUSES = {
